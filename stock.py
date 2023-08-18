@@ -9,7 +9,7 @@ import datetime
 from datetime import datetime
 from os import mkdir
 import xlsxwriter
-import openpyxl 
+import openpyxl
 
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("dark-blue")
@@ -77,6 +77,7 @@ def main():
         os.makedirs("Planillas/" + currentYear + "/" + currentMonth)
                 
     def createFile():
+        print("Creando archivo")
         archivo=xlsxwriter.Workbook("Planillas/" + currentYear + "/" + currentMonth + "/" + "Planilla - " + str(datetime.now().day) + '.xlsx')
         format = archivo.add_format()
         format.set_font_size(20)
